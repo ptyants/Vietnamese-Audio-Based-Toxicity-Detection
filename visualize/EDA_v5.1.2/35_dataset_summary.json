@@ -1,0 +1,98 @@
+{
+  "dataset": {
+    "csv": "A:\\A _ Working\\Researching\\B - AIoT Lab VN\\VITOSA SpeechRun\\vitosa_datasets\\final_vietnamese_toxic_utterance_dataset_v5.1.2_speaker_split.csv",
+    "rows": 24693,
+    "columns": 13
+  },
+  "audio": {
+    "wav_folder": "A:\\A _ Working\\Researching\\B - AIoT Lab VN\\VITOSA SpeechRun\\vitosa_datasets\\wav_segments_v5.1",
+    "total_wav": 31805,
+    "readable_wav": 31805,
+    "corrupted_wav": 0
+  },
+  "quality": [
+    {
+      "issue": "duplicate_audio_path",
+      "count": 498,
+      "percentage": 0.02016765885068643,
+      "severity": "REVIEW",
+      "note": "Kiểm tra duplicate trước khi loại."
+    },
+    {
+      "issue": "missing_transcript",
+      "count": 4542,
+      "percentage": 0.18393876807192322,
+      "severity": "REVIEW",
+      "note": "Quan trọng cho ASR/TSD."
+    },
+    {
+      "issue": "missing_speaker_id",
+      "count": 12802,
+      "percentage": 0.5184465233062001,
+      "severity": "IMPORTANT",
+      "note": "Kiểm tra speaker-independent split."
+    },
+    {
+      "issue": "corrupted_audio",
+      "count": 0,
+      "percentage": 0.0,
+      "severity": "CRITICAL",
+      "note": "Audio không đọc được."
+    },
+    {
+      "issue": "non_16k_audio",
+      "count": 0,
+      "percentage": 0.0,
+      "severity": "REVIEW",
+      "note": "Kiểm tra sampling-rate requirement."
+    },
+    {
+      "issue": "non_mono_audio",
+      "count": 0,
+      "percentage": 0.0,
+      "severity": "REVIEW",
+      "note": "Kiểm tra nếu model yêu cầu mono."
+    },
+    {
+      "issue": "very_short_audio",
+      "count": 1,
+      "percentage": 3.144159723313944e-05,
+      "severity": "REVIEW",
+      "note": "Không xóa tự động."
+    },
+    {
+      "issue": "very_long_audio",
+      "count": 1,
+      "percentage": 3.144159723313944e-05,
+      "severity": "REVIEW",
+      "note": "Kiểm tra segment."
+    }
+  ],
+  "audio_signal": {
+    "duration_mean_sec": 5.936139720562804,
+    "duration_median_sec": 5.57825,
+    "duration_min_sec": 0.408,
+    "duration_max_sec": 22.224,
+    "sampling_rates": {
+      "16000": 31805
+    },
+    "channels": {
+      "1": 31805
+    }
+  },
+  "toxicity": {
+    "0": 12366,
+    "1": 12327
+  },
+  "split": {
+    "train": 17914,
+    "validation": 4779,
+    "test": 2000
+  },
+  "audio_source": {
+    "vitosa": 12802,
+    "fosd": 4990,
+    "retrieval": 4542,
+    "common_voice": 2359
+  }
+}

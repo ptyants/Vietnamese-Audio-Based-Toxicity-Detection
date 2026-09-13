@@ -1,0 +1,4 @@
+﻿class,human_label_value,purity,formula
+NON_TOXIC,0,0.8869801084990958,TN / (TN + FN)
+TOXIC,1,0.9787472035794184,TP / (TP + FP)
+OVERALL,both,0.928,sum(max true-class count in each predicted cluster)) / N

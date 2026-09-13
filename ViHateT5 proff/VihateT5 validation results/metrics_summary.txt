@@ -1,0 +1,43 @@
+ViHateT5 ONLY - ViToSA TEST EVALUATION
+========================================================================
+Model: tarudesu/ViHateT5-base-HSD
+Prompt: hate-speech-detection: <transcript>
+Split: split == test
+Reference label: toxicity
+Samples: 2000
+
+Core classification metrics
+accuracy: 0.928000
+balanced_accuracy: 0.928000
+precision_toxic: 0.978747
+recall_toxic: 0.875000
+f1_toxic: 0.923970
+precision_non_toxic: 0.886980
+recall_non_toxic: 0.981000
+f1_non_toxic: 0.931624
+macro_precision: 0.932864
+macro_recall: 0.928000
+macro_f1: 0.927797
+weighted_precision: 0.932864
+weighted_recall: 0.928000
+weighted_f1: 0.927797
+specificity_non_toxic: 0.981000
+npv_non_toxic: 0.886980
+false_positive_rate: 0.019000
+false_negative_rate: 0.125000
+mcc: 0.860850
+cohen_kappa: 0.856000
+jaccard_toxic: 0.858685
+
+Confusion matrix
+                    Pred NON_TOXIC   Pred TOXIC
+True NON_TOXIC              981           19
+True TOXIC                  125          875
+
+Purity
+NON_TOXIC purity: 0.886980 = TN/(TN+FN)
+TOXIC purity:     0.978747 = TP/(TP+FP)
+Overall purity:   0.928000
+
+AUC/PR note
+ViHateT5 generation does not produce a calibrated binary probability in this script, so ROC-AUC/AUPRC are not fabricated.
